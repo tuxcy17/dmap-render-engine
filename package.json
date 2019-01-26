@@ -4,7 +4,9 @@
   "description": "A dumb render engine for experimenting various stuff",
   "main": "index.js",
   "scripts": {
-    "test": "npx ts-node ./test/index.spec.ts"
+    "lint": "npx tslint --force -t json --project tsconfig.json -c tslint.json 'src/**/*.ts' -o ./report/report.json",
+    "test": "npx ts-node ./test/index.spec.ts",
+    "coverage": "npx nyc --reporter=lcov --report-dir=report/coverage npm run test && nyc report"
   },
   "repository": {
     "type": "git",
@@ -28,5 +30,8 @@
     "typescript": "^3.2.4",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1"
+  },
+  "devDependencies": {
+    "nyc": "^13.1.0"
   }
 }

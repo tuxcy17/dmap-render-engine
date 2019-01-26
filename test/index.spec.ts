@@ -11,8 +11,7 @@ import {TestRunner, TestSet} from "alsatian";
 
     testRunner.outputStream
         .pipe(TapBark.create().getPipeable())
-        .pipe(process.stdout)
-        .pipe();
+        .pipe(process.stdout);
 
     await testRunner.run(testSet);
 })().catch(e =>

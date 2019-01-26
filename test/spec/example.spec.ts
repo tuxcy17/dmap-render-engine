@@ -1,4 +1,5 @@
-import { AsyncTest, Expect, Test, TestCase, TestFixture } from "alsatian";
+import { Expect, Test, TestCase, TestFixture } from "alsatian";
+import {DumbService} from "../../src/services/dumb";
 
 @TestFixture("whatever you'd like to call the fixture")
 export class SetOfTests {
@@ -8,6 +9,7 @@ export class SetOfTests {
     @TestCase(3, 3, 6)
     @Test("addition tests")
     public addTest(firstNumber: number, secondNumber: number, expectedSum: number) {
-        Expect(firstNumber + secondNumber).toBe(expectedSum);
+        let service = new DumbService();
+        Expect(service.add(firstNumber, secondNumber)).toBe(expectedSum);
     }
 }

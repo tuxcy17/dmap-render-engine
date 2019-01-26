@@ -1,0 +1,23 @@
+{
+  "name": "dmap-render-engine",
+  "version": "0.0.1",
+  "description": "A dumb render engine for experimenting various stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuxcy17/dmap-render-engine.git"
+  },
+  "keywords": [
+    "typescript",
+    "gis"
+  ],
+  "author": "tuxcy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tuxcy17/dmap-render-engine/issues"
+  },
+  "homepage": "https://github.com/tuxcy17/dmap-render-engine#readme"
+}

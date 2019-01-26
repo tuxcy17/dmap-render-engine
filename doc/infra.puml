@@ -1,0 +1,13 @@
+@startuml
+
+[GITHUB]
+
+[SONAR-QUBE-IO]
+
+[TRAVIS]
+
+[LOCAL]
+
+[GOOGLE-CODE-PLATFORM]
+
+@enduml

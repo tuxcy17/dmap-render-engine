@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "npx tslint --force -t json --project tsconfig.json -c tslint.json 'src/**/*.ts' -o ./report/report.json",
     "test": "npx ts-node ./test/index.spec.ts",
-    "coverage": "npx nyc --reporter=lcov --report-dir=report/coverage npm run test && nyc report"
+    "coverage": "npx nyc npm run test && npx nyc report"
   },
   "repository": {
     "type": "git",
@@ -33,5 +33,18 @@
   },
   "devDependencies": {
     "nyc": "^13.1.0"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src"
+    ],
+    "reporter": [
+      "lcov"
+    ],
+    "report-dir": "report/coverage"
+
   }
 }
